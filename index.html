@@ -147,8 +147,8 @@
 								<ul v-else class="statistics">
 									<li v-for="event in events" :class="getStyle(event.start.dateTime)">
 										<span class="icon solid fa-calendar"></span>
-										<strong>{{month(event.start.dateTime)}} {{ day(event.start.dateTime) }}</strong>
-										<a target="_blank" v-bind:href="event.htmlLink">{{event.summary}} ({{ day(event.start.dateTime, true) }} {{ hour(event.start.dateTime) }} ~ {{ hour(event.end.dateTime) }})</a>
+										<strong>{{month(event.start)}} {{ day(event.start) }}</strong>
+										<a target="_blank" v-bind:href="event.htmlLink">{{event.summary}} ({{ day(event.start, true) }} {{ hour(event.start) }} ~ {{ hour(event.end) }})</a>
 										<!--<span>{{event.location}}</span>-->
 									</li>
 								</ul>
@@ -459,9 +459,6 @@
 						hour(timestamp) {
 							let date = new Date(timestamp);
 							let value = date.toLocaleString('default', { hour: '2-digit' , hour12: true, minute: '2-digit' });
-							if (value === 'Invalid Date') {
-								return '00';
-							}
 							return value;
 						},
 						month(timestamp) {
