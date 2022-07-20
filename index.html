@@ -395,7 +395,7 @@
 							<h2>Contato</h2>
 							<dl class="alt">
 								<dt>Endereço</dt>
-								<dd><a target="_blank" href="https://goo.gl/maps/uNqnH1CQKB1LAnLG6">R. Celestina E Foggiatto, 180 - Cruzeiro, São José dos Pinhais - PR, 83010-370</a></dd>
+								<dd><a target="_blank" href="https://goo.gl/maps/uNqnH1CQKB1LAnLG6">R. Celestina E Foggiatto, 1080 - Cruzeiro, São José dos Pinhais - PR, 83010-370</a></dd>
 								<dt>Secretaria</dt>
 								<dd>(41) 98810-6764</dd>
 								<dt>Email</dt>
@@ -492,6 +492,7 @@
 							}).then(function (response) {
 								if (response.result.items) {
 									ref.events = response.result.items;
+									console.log(ref.events);
 								}
 							}, function (reason) {
 								console.log('Error: ' + reason.result.error.message);
