@@ -458,7 +458,9 @@
 						},
 						hour(timestamp) {
 							let date = new Date(timestamp);
-							return date.toLocaleString('default', { hour: '2-digit' , hour12: true, minute: '2-digit' });
+							let value = date.toLocaleString('default', { hour: '2-digit' , hour12: true, minute: '2-digit' });
+							console.log(value);
+							return value;
 						},
 						month(timestamp) {
 							let date = new Date(timestamp);
