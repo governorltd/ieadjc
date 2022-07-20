@@ -450,7 +450,7 @@
 							}
 						},
 						day(timestamp, text=false) {
-							console.log(timestamp);
+							console.log(typeof(timestamp));
 							let date = new Date(timestamp?.dateTime ? timestamp?.dateTime : timestamp?.date);
 							if (text) {
 								return date.toLocaleString('default', { weekday: 'long' });
