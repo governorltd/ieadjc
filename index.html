@@ -459,7 +459,9 @@
 						hour(timestamp) {
 							let date = new Date(timestamp);
 							let value = date.toLocaleString('default', { hour: '2-digit' , hour12: true, minute: '2-digit' });
-							console.log(value);
+							if (value === 'Invalid Date') {
+								return '00';
+							}
 							return value;
 						},
 						month(timestamp) {
