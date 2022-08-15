@@ -165,6 +165,11 @@
 										</thead>
 										<tbody>
 											<tr>
+												<td><b>Terça-feira</b></td>
+												<td>Culto intitulado <b>"Tarde da Benção"</b>.</td>
+												<td>Inicia as 14:30hrs</td>
+											</tr>
+											<tr>
 												<td><b>Quarta-feira</b></td>
 												<td>Culto intitulado <b>"Culto da vitória"</b>.</td>
 												<td>Inicia as 20:00hrs</td>
@@ -186,22 +191,22 @@
 											</tr>
 											<tr>
 												<td><b>2º Domingo</b></td>
-												<td>Culto de <b>"Missões e Evangelismo"</b>.</td>
+												<td>Culto da <b>"Família"</b>.</td>
 												<td>Inicia as 19:00hrs</td>
 											</tr>
 											<tr>
 												<td><b>3º Sábado</b></td>
-												<td>Culto com o departamento dos <b>"Adolescentes e Jovens"</b>.</td>
+												<td>Culto com o departamento dos <b>"Jovens"</b>.</td>
 												<td>Inicia as 19:30hrs</td>
 											</tr>
 											<tr>
 												<td><b>3º Domingo</b></td>
-												<td>Culto de <b>"Ensino"</b>.</td>
+												<td>Culto de <b>"Missões e Evangelismo"</b>.</td>
 												<td>Inicia as 19:00hrs</td>
 											</tr>
 											<tr>
 												<td><b>4º Sábado</b></td>
-												<td>Culto com o departamento da <b>"Família"</b>.</td>
+												<td>Culto intitulado <b>"Louvor e Adoração"</b>.</td>
 												<td>Inicia as 19:30hrs</td>
 											</tr>
 											<tr>
@@ -498,6 +503,7 @@
 								});
 							}).then(function (response) {
 								if (response.result.items) {
+									console.log(response);
 									ref.events = response.result.items;
 								}
 							}, function (reason) {
